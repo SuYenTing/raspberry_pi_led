@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<body style="font-family:arial, sans-serif">
+    <h1 style="background:lightblue;padding:10px">
+        樹莓派LED燈控制介面
+    </h1>
+    
+    <p>請選擇LED亮燈方式：</p>
+    
+    <div>
+        <form action="/" method="post">
+            <input type="submit" name="action" value="同時發亮" style="margin-right:10px;">
+            <input type="submit" name="action" value="輪流發亮" style="margin-right:10px;">
+            <input type="submit" name="action" value="閃爍發亮" style="margin-right:10px;">
+            <input type="submit" name="action" value="停止發亮" style="margin-right:10px;">
+        </form>
+    </div>
+
+    <p style="color:red;">{{message}}</p>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  flask:
+    build:
+      context: ./
+      dockerfile: dockerfile-flask
+    container_name: led_light
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - TARGET=LIVE
+    privileged: true
+    volumes:
+      - ./app:/app
